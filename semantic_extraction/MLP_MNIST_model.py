@@ -118,6 +118,7 @@ for e in range(10):
                   eval_loss / len(test_data), eval_acc / len(test_data)))
 
 # save the model
+os.makedirs('saved_model', exist_ok=True)
 torch.save(mlp.state_dict(), 'saved_model/MLP_MNIST.pkl')
 
 # file = './results/MLP_MNIST_model/acc.csv'
